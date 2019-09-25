@@ -95,6 +95,15 @@ Electrician's tape, which is designed with the tactit assumption that it will on
 
 **WARNING:** *Do not use the debug cable if the breakout board has not been properly taped or placed in an insulating case. Doing so can result in the pins being crossed should the pins on breakout board contact something conductive, which could lead to undesired operation, or short circuiting.*
 
+### Getting fancy
+
+If you want to get a little fancier and don't like tape, I've been working on a 3D printed case for the PCB. This is at this moment, a work in progress and this version had some issues that I needed to fix with a dremel, so at this moment I won't be releasing these until I can work those problems back out, but this is an example of what you can do to get a little fancier. I originally planned to tie a knot in the cable in the large channel, but then realized I didn't give it enough room and so decided to glue it in place. The second version of the case I design won't have this void, and will just use a channel for glue. 
+
+![Wiring the whole thing together](https://github.com/Peter-Easton/android-debug-cable-howto/blob/master/dbc-howto-with-case.jpg)
+
+Final product, assembled and painted. I'm a tad bit out of practice with the paint, as you can tell! 
+
+![Assembled and painted](https://github.com/Peter-Easton/android-debug-cable-howto/blob/master/dbc-howto-final-product.jpg)
 
 ## Using Your Debugging Cable
 
