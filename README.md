@@ -136,6 +136,15 @@ Once you are ready, use the volume buttons on your phone to select through the F
 Note that your new debugging cable cannot be used for typical operations. While the Android operating system is online, it may connect to the USB interface only intermittently, constantly connecting and disconnecting the host.
 
 
+To disable uart debugging, use
+
+`$ fastboot oem uart f`
+
+Visit "Locking the bootloader" in the installation guide at https://grapheneos.org/install#locking-the-bootloader for details on how to re-lock your bootloader. 
+
+**ATTENTION:** *Unlocking or re-locking the bootloader of your phone will immediately perform a factory reset, permanently erasing all the data stored on the SSD at the time. There is no undelete nor recovery from this state. Ensure you have backed up your data, such as contact lists, password manager databases, and backed up your One Time Password seeds or have other means to access your 2FA protected accounts. It cannot be recovered after the fact.*
+
+
 ## Troubleshooting 
 
 #### "I see strange or unrecognizeable characters in minicom alongside the text. What gives?"
