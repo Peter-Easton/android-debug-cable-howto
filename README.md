@@ -121,6 +121,8 @@ Once you see the fastboot screen, Connect your cellphone to the debug cable via 
 
 **ATTENTION:** *If fastboot hangs at* `<waiting for device>` *it may be because your udev rules are not set correctly or not set at all. Ensure your udev rules are set correctly to allow the computer to talk to the device at fastboot. An ugly, but effective workaround is to run the command as the root user.* 
 
+**DANGER!** *Locking your bootloader does not disable uart. Prior to putting your cellphone back in use again, you should disable uart with* `fastboot oem uart disable` *prior to locking your bootloader. Otherwise uart may remain enabled with the bootloader locked and allow uart debugging of the device. This could be exploitable or an attack vector in the event your phone is ever taken and plugged into anything, even momentarily.*
+
 If all goes well, fastboot will report "OKAY" and print the time taken to finish the command. Check to ensure that it worked by seeing if it created a new USB tty device with: 
 
 `$ ls /dev/ttyUSB0 && echo "Looks like it's working."`
