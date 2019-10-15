@@ -111,7 +111,7 @@ To obtain the kernel logs, you will need to unlock your bootloader. Visit "Unloc
 
 **ATTENTION:** *Unlocking or re-locking the bootloader of your phone will immediately perform a factory reset, permanently erasing all the data stored on the SSD at the time. There is no undelete nor recovery from this state. Ensure you have backed up your data, such as contact lists, password manager databases, and backed up your One Time Password seeds or have other means to access your 2FA protected accounts. It cannot be recovered after the fact.*
 
-**WARNING:** *Unlocking the bootloader will bypass all software integrity checks for as long as the bootloader remains unlocked. Never use any device with an unlocked bootloader for anything where you have any expectation of security and/or privacy. Always ensure you disable uart debugging and lock your bootloader again prior to using your phone for day-to-day applications again.*
+**DANGER!** *Unlocking the bootloader will bypass all software integrity checks for as long as the bootloader remains unlocked. Never use any device with an unlocked bootloader for anything where you have any expectation of security and/or privacy. Locking your bootloader does not disable uart. If the bootloader is locked without first disabling uart, uart will remain enabled with the bootloader locked and allow uart debugging of the device. Always ensure you disable uart debugging and lock your bootloader again prior to using your phone for day-to-day applications again.*
 
 Once the bootloader is unlocked, reboot your phone to the bootloader by first switching off the phone, then pressing and holding down the Power and Volume Down buttons on your phone until the fastboot screen appears. On Pixel 3s, the Fastboot screen has white text with the phone's status, and has "Fastboot" near the top. 
 
@@ -122,8 +122,6 @@ Once you see the fastboot screen, Connect your cellphone to the debug cable via 
 `$ fastboot oem uart enable`
 
 **ATTENTION:** *If fastboot hangs at* `<waiting for device>` *it may be because your udev rules are not set correctly or not set at all. Ensure your udev rules are set correctly to allow the computer to talk to the device at fastboot. An ugly, but effective workaround is to run the command as the root user.* 
-
-**DANGER!** *Locking your bootloader does not disable uart. Prior to putting your cellphone back in use again, you should disable uart with* `fastboot oem uart disable` *prior to locking your bootloader. Otherwise uart may remain enabled with the bootloader locked and allow uart debugging of the device. This could be exploitable or an attack vector in the event your phone is ever taken and plugged into anything, even momentarily.*
 
 If all goes well, fastboot will report "OKAY" and print the time taken to finish the command. Check to ensure that it worked by seeing if it created a new USB tty device with: 
 
@@ -138,7 +136,6 @@ Connect to the virtual terminal with minicom. The command sequence is:
 Once you are ready, use the volume buttons on your phone to select through the Fastboot options to switch your phone on. You should see the kernel debug logs appear on minicom. To exit the minicom console, press `[CTRL + A]` to bring up the menu, followed by the `[x]` key to bring up the confirm exit menu. 
 
 Note that your new debugging cable cannot be used for typical operations. While the Android operating system is online, it may connect to the USB interface only intermittently, constantly connecting and disconnecting the host.
-
 
 To disable uart debugging, use
 
