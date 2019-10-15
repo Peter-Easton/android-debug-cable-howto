@@ -111,9 +111,11 @@ To obtain the kernel logs, you will need to unlock your bootloader. Visit "Unloc
 
 **ATTENTION:** *Unlocking or re-locking the bootloader of your phone will immediately perform a factory reset, permanently erasing all the data stored on the SSD at the time. There is no undelete nor recovery from this state. Ensure you have backed up your data, such as contact lists, password manager databases, and backed up your One Time Password seeds or have other means to access your 2FA protected accounts. It cannot be recovered after the fact.*
 
-**WARNING:** *Unlocking the bootloader will bypass all software integrity checks for as long as the bootloader remains unlocked. Never use any device with an unlocked bootloader for anything where you have any expectation of security and/or privacy. Always ensure you lock your bootloader again prior to using your phone for day-to-day applications again.*
+**WARNING:** *Unlocking the bootloader will bypass all software integrity checks for as long as the bootloader remains unlocked. Never use any device with an unlocked bootloader for anything where you have any expectation of security and/or privacy. Always ensure you disable uart debugging and lock your bootloader again prior to using your phone for day-to-day applications again.*
 
 Once the bootloader is unlocked, reboot your phone to the bootloader by first switching off the phone, then pressing and holding down the Power and Volume Down buttons on your phone until the fastboot screen appears. On Pixel 3s, the Fastboot screen has white text with the phone's status, and has "Fastboot" near the top. 
+
+**WARNING:** *It is possible to gain root privileges through the debugging console.  Be sure to turn off uart debugging before locking the bootloader.*
 
 Once you see the fastboot screen, Connect your cellphone to the debug cable via the breakout board. You will need to plug a USB-C cable into the breakout board, and plug both the USB and Serial to USB-C cables into the computer running adb. Once all the cables are plugged in, enable uart debugging in fastboot via the command on the computer with:  
 
