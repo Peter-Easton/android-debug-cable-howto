@@ -1,4 +1,4 @@
-# How To Make Your Own Pixel 2 or Pixel 3 Debugging Cable
+# How To Make Your Own Pixel 2, Pixel 3 or Pixel 4 Debugging Cable
 
 ## Intro
 
