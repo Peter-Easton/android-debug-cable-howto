@@ -139,7 +139,7 @@ Note that your new debugging cable cannot be used for typical operations. While 
 
 To disable uart debugging, use
 
-`$ fastboot oem uart f`
+`$ fastboot oem uart disable`
 
 Visit "Locking the bootloader" in the installation guide at https://grapheneos.org/install#locking-the-bootloader for details on how to re-lock your bootloader. 
 
